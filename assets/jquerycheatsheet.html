@@ -1,0 +1,55 @@
+<!-- using HTML file so it looks correct -->
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script>
+
+//document ready function
+$(document).ready(function() {
+	console.log("document fully loaded")
+        });
+
+//anonymous function
+function() {
+	console.log("annymous");
+}
+
+//calling that anonymous function
+$(document).ready(function() {
+	console.log("document fully loaded");
+	function() {
+		$(".wrapperbkd").fadeIn(2000)};
+});
+
+//fading out, then waitign to fade in
+$(".animate").animate({
+    opacity: 0.0
+}, 01);
+
+$(".animate").delay(2800).animate({
+	opacity: 0.9 
+}, 2000);
+
+
+$(".fakeout").click(function() {
+	alert("You Cant Apply!!");
+});
+
+
+
+// can be written like this
+
+var animateMenu = function(){
+	$(".fakeout").animate( {
+		opacity: .5
+});
+
+$(".fakeout").show(animatmateMenu);	
+
+// or this
+$(".fakeout").show( function(){
+	$(".fakeout").animate( {opacity: .5})
+});
+
+
+</script>
